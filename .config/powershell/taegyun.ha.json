@@ -66,12 +66,28 @@
         "alignment": "right",
         "segments": [
           {
+            "type": "python",
+            "style": "diamond",
+            "invert_powerline": true,
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#ffffff",
+            "background": "#306998",
+            "leading_diamond": " \ue0b6",
+            "trailing_diamond": "\ue0b4",
+            "properties": {
+                "display_mode": "environment",
+                "fetch_virtual_env": true,
+                "home_enabled": true
+            },
+            "template": " \uE235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
+          },
+          {
             "type": "time",
             "style": "diamond",
             "invert_powerline": true,
             "leading_diamond": " \uE0B6",
             "trailing_diamond": "\uE0B4",
-            "background": "#40c4ff",
+            "background": "#d4922f",
             "foreground": "#ffffff",
             "properties": {
               "prefix": " \uf5ef ",

@@ -23,10 +23,10 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a 
 irm get.scoop.sh | iex
 ```
 
-### neovim | gcc
+### neovim | gcc | fzf
 
 ```powershell
-scoop install neovim gcc
+scoop install neovim gcc fzf
 ```
 
 <br>
