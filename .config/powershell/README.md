@@ -88,3 +88,13 @@ nvim $PROFILE.CurrentUserCurrentHost
     "yellow": "#E5C07B"
 },
 ```
+
+<br>
+
+# Anaconda
+
+**Remove prefix of anaconda virtual environment**
+
+```powershell
+conda config --set changeps1 false
+```
