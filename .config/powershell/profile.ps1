@@ -11,6 +11,8 @@ Import-Module -Name Terminal-Icons
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
+Set-PSReadLineKeyHandler -Chord "Ctrl+l" -Function ForwardWord
+Set-PSReadLineKeyHandler -Chord "Ctrl+shift+l" -Function AcceptSuggestion
 Set-PSReadLineOption -PredictionSource History
 
 # Fzf
