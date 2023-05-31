@@ -49,6 +49,10 @@ function touch {
     }
 }
 
+function cwd {
+    (pwd).Path | Set-Clipboard
+}
+
 # Anaconda utility
 function anaconda {
     $command = $args[0]
