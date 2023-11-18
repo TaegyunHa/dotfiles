@@ -100,3 +100,9 @@ nvim $PROFILE.CurrentUserCurrentHost
 ```powershell
 conda config --set changeps1 false
 ```
+
+**Do not init conda environment automatically**
+
+```powershell
+conda config --set auto_activate_base false
+```
