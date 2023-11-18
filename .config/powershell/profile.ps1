@@ -61,10 +61,10 @@ function anaconda {
     }
     
     if ($command -eq "activate") {
-        Start-Process -FilePath $env:userprofile\Anaconda3\condabin\conda.bat -ArgumentList "init powershell" -Wait -NoNewWindow
+        sudo Start-Process -FilePath D:\bin\Anaconda3\condabin\conda.bat -ArgumentList "init powershell" -Wait -NoNewWindow
         Invoke-Command { & "pwsh.exe" } -NoNewScope
     } elseif ($command -eq "deactivate") {
-        Start-Process -FilePath $env:userprofile\Anaconda3\condabin\conda.bat -ArgumentList "init powershell --reverse" -Wait -NoNewWindow
+        sudo Start-Process -FilePath D:\bin\Anaconda3\condabin\conda.bat -ArgumentList "init powershell --reverse" -Wait -NoNewWindow
         Invoke-Command { & "pwsh.exe" } -NoNewScope
     } else {
         throw "anaconda: missing command [activate/deactivate]"
