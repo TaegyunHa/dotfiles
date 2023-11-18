@@ -35,8 +35,10 @@ winget install -e --id Git.Git
 
 ## Oh My Posh
 
+> https://ohmyposh.dev/
 ```powershell
 winget install JanDeDobbeleer.OhMyPosh -s winget
+# scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 ```
 
 **Font**
