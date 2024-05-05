@@ -48,3 +48,17 @@ iterm colour theme
 ```
 https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/nord-light.itermcolors
 ```
+
+### Auto completion
+
+```
+vim $ZSH_CUSTOM/shortcuts.zsh
+```
+
+```zsh
+# $ZSH_CUSTOM/shortcuts.zsh
+
+# autosuggest settings
+bindkey '^.' autosuggest-accept
+bindkey '^,' autosuggest-clear
+```
