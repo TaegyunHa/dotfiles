@@ -59,6 +59,6 @@ vim $ZSH_CUSTOM/shortcuts.zsh
 # $ZSH_CUSTOM/shortcuts.zsh
 
 # autosuggest settings
-bindkey '^.' autosuggest-accept
-bindkey '^,' autosuggest-clear
+bindkey '^]' autosuggest-accept
+bindkey '^[' autosuggest-clear
 ```
