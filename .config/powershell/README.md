@@ -93,6 +93,14 @@ nvim $PROFILE.CurrentUserCurrentHost
 
 <br>
 
+# Environment Variables
+
+Variable                |Value|Description
+------------------------|-----|---------------------------
+`POWERSHELL_UPDATECHECK`|`off`|Disable update notification 
+
+<br>
+
 # Anaconda
 
 **Remove prefix of anaconda virtual environment**
