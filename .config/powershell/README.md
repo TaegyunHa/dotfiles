@@ -24,7 +24,7 @@ irm get.scoop.sh | iex
 **neovim | gcc | fzf**
 
 ```powershell
-scoop install neovim gcc fzf sudo
+scoop install neovim gcc fzf sudo unzip wget gzip
 ```
 
 ## Git
