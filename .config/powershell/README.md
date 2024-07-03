@@ -103,6 +103,21 @@ Variable                |Value|Description
 
 # Anaconda
 
+**Install**
+```powershell
+winget install --id=Anaconda.Miniconda3 -e
+```
+
+**Update**
+```powershell
+conda update conda
+```
+
+**Init conda**
+```powershell
+conda init
+```
+
 **Remove prefix of anaconda virtual environment**
 
 ```powershell
