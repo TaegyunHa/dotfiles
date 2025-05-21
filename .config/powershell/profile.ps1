@@ -27,6 +27,7 @@ Set-Alias -Name vim -Value nvim
 Set-Alias ll ls
 Set-Alias g git
 Set-Alias grep findstr
+Set-Alias ex explorer
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 
@@ -54,19 +55,16 @@ function cwd {
 }
 
 # Anaconda utility
-function anaconda {
-    $command = $args[0]
-    if($null -eq $command) {
-        throw "anaconda: missing command [activate/deactivate]"
-    }
-    
-    if ($command -eq "activate") {
-        sudo Start-Process -FilePath D:\bin\Anaconda3\condabin\conda.bat -ArgumentList "init powershell" -Wait -NoNewWindow
-        Invoke-Command { & "pwsh.exe" } -NoNewScope
-    } elseif ($command -eq "deactivate") {
-        sudo Start-Process -FilePath D:\bin\Anaconda3\condabin\conda.bat -ArgumentList "init powershell --reverse" -Wait -NoNewWindow
-        Invoke-Command { & "pwsh.exe" } -NoNewScope
+function myconda {
+    param(
+        [string]$cmd = "activate"
+    )
+    if ($cmd -eq "activate") {
+        if (Test-Path "$env:MINICONDA_EXE") {
+            (& "$env:MINICONDA_EXE" "shell.powershell" "hook") | Out-String | ?{$_} | Invoke-Expression
+            (& Write-Output "Miniconda activated")
+        }
     } else {
-        throw "anaconda: missing command [activate/deactivate]"
+        & Write-Output "Invalid command"
     }
 }
