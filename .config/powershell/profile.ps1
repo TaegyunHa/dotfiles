@@ -12,7 +12,15 @@ Set-PSReadLineOption -BellStyle None
 Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineKeyHandler -Chord "Ctrl+l" -Function ForwardWord
 Set-PSReadLineKeyHandler -Chord "Ctrl+shift+l" -Function AcceptSuggestion
-Set-PSReadLineOption -PredictionSource History
+# Set PredictionSource only if it's supported
+try {
+    $options = Get-PSReadLineOption
+    if ($options.PredictionSource -ne $null) {
+        Set-PSReadLineOption -PredictionSource History
+    }
+} catch {
+    # Suppress the error silently
+}
 
 # Fzf
 Import-Module PSFzf
