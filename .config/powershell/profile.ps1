@@ -39,6 +39,23 @@ Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 
 # Utilities
+function .. {
+    param(
+        [int]$levels = 1
+    )
+    # Ensure at least one level
+    if ($levels -lt 1) {
+        $levels = 1
+    }
+    else {
+        # For more than 3 levels, build a single concatenated "..\..\..\..."
+        # 1..$levels creates an array [1,2,…,$levels]; ForEach-Object { '..' } makes an array of '..' repeated
+        # Joining with '\' yields "..\..\..\.." (as many times as $levels)
+        $relativePath = (1..$levels | ForEach-Object { '..' }) -join '\'
+        Set-Location $relativePath
+    }
+}
+
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
