@@ -9,8 +9,8 @@
 
 ```powershell
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
-Install-Module -Name z -Force
-Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+Install-Module -Name z
+Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 Install-Module -Name PSFzf -Scope CurrentUser -Force
 Install-Module -Name posh-git
 ```
