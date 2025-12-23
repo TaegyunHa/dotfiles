@@ -1,9 +1,12 @@
-[submodule ".config/tmux"]
-	path = .config/tmux
+[submodule "tmux"]
+	path = tmux
 	url = git@github.com:TaegyunHa/tmux.git
-[submodule ".config/zsh"]
-	path = .config/zsh
+[submodule "zsh"]
+	path = zsh
 	url = git@github.com:TaegyunHa/zsh.git
-[submodule ".config/nvim"]
-	path = .config/nvim
+[submodule "nvim"]
+	path = nvim
 	url = git@github.com:TaegyunHa/nvim.git
+[submodule "powershell"]
+	path = powershell
+	url = git@github.com:TaegyunHa/powershell.git
